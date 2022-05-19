@@ -1,0 +1,55 @@
+/* =============
+    Search
+============= */
+#search{
+    background-color: #4262DA;
+
+    @include md{
+        background-color: #F598AF;
+    }
+
+    @include lg{
+        background-color: #36B0A1;
+    }
+
+    @include xl{
+        background-color: #5E5BB9;
+    }
+
+    div{
+        margin: 16px 0;
+
+        @include md{
+            margin: 16px 0 18px;
+        }
+
+        form{
+            
+            display: flex;
+
+            input{
+                border: 5px;
+                background-color: transparent;
+                width: 100%;
+            }
+
+            button{
+                border: none;
+                border-radius: 5px;
+                background-color: transparent;
+                height: 50px;
+                width: 50px;
+                margin-left: 16px;
+            
+                @include md{
+                    margin-left: 24pxpx;
+                }
+    
+                img{
+                    width: 100%;
+                    align-items: center;
+                }
+        }
+}
+    }
+}

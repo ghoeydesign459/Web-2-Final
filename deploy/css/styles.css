@@ -352,16 +352,75 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.global-content {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". global-content .";
+}
+@media (min-width: 1200px) {
+  .global-content {
+    grid-template-columns: auto 1440px auto;
+  }
+}
+.global-content > div {
+  grid-area: global-content;
+}
+
+.spacing {
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  .spacing {
+    margin-top: 64px;
+  }
+}
+@media (min-width: 1024px) {
+  .spacing {
+    margin-top: 64px;
+  }
+}
+
+.show-for-lg {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .show-for-lg {
+    display: block;
+  }
+}
+.show-for-lg .show-for-xl {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .show-for-lg .show-for-xl {
+    display: block;
+  }
+}
+
 /* =============
     Typography
 ============= */
+h1, h2, h3, h4, h5 {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
 /* =============
     Buttons
 ============= */
-button {
-  border: none;
-}
-
 /* =============
     Forms
 ============= */
@@ -387,10 +446,69 @@ textarea {
     Header
 ============= */
 header {
-  color: red;
-  font-size: 0.75rem;
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". header .";
+  padding: 24px 16px;
+}
+header div #logo {
+  display: flex;
 }
 
 /* =============
     Footer
 ============= */
+/* =============
+    Search
+============= */
+#search {
+  background-color: #4262DA;
+}
+@media (min-width: 768px) {
+  #search {
+    background-color: #F598AF;
+  }
+}
+@media (min-width: 1024px) {
+  #search {
+    background-color: #36B0A1;
+  }
+}
+@media (min-width: 1200px) {
+  #search {
+    background-color: #5E5BB9;
+  }
+}
+#search div {
+  margin: 16px 0;
+}
+@media (min-width: 768px) {
+  #search div {
+    margin: 16px 0 18px;
+  }
+}
+#search div form {
+  display: flex;
+}
+#search div form input {
+  border: 5px;
+  background-color: transparent;
+  width: 100%;
+}
+#search div form button {
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  #search div form button {
+    margin-left: 24pxpx;
+  }
+}
+#search div form button img {
+  width: 100%;
+  align-items: center;
+}

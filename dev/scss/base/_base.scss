@@ -1,5 +1,54 @@
 /* =============
     Base
 ============= */
+ul {
+    margin: 0;
+    padding: 0;
 
+    li {
+        list-style: none;
+    }
+}
+
+.global-content {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". global-content .";
+
+    @include xl {
+        grid-template-columns: auto 1440px auto;
+    }
+
+    >div {
+        grid-area: global-content;
+    }
+}
+
+.spacing {
+    margin-top: 32px;
+
+    @include md {
+        margin-top: 64px;
+    }
+
+    @include lg {
+        margin-top: 64px;
+    }
+}
+
+.show-for-lg {
+    display: none;
+
+    @include lg {
+        display: block;
+    }
+
+    .show-for-xl {
+        display: none;
+
+        @include xl {
+            display: block;
+        }
+    }
+}
 
