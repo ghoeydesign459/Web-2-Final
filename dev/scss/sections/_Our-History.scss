@@ -3,6 +3,11 @@
 ============= */
 #History{
     grid-area: History;
+    margin: 16px;
+
+    @include lg{
+        margin: 24px;
+    }
 
     h1 {
         font-weight: 500;
@@ -28,30 +33,32 @@
         padding-top: 24px;
         display: grid;
         grid-template-rows: 50vh 75vh;
-
+        
         @include md {
-            grid-template-rows: 50vh 50vh;
-                grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 40vh 40vh;
+                grid-template-columns: 2;
                 grid-template-areas:
                     "i1 i1 i2 i2"
-                    "i1 i1 i2 i2"
-                    "i1 i1 i2 i2"
+                    "i3 i3 i3 i3"
+                    "i3 i3 i3 i3";
         }
 
         #i1{
             background-image: url("../img/History/nike-sb-shoe-boxes-explained-08 (1).png");
-
+            margin: 16px;
             @include md{
                 background-position: center;
+                background-size: cover;
                 grid-area: i1;
             }
         }
 
         #i2{
             background-image: url("../img/History/nike-sb-shoe-boxes-explained-01 (1).png");
-
+            margin: 16px;
             @include md{
                 background-position: center;
+                background-size: cover;
                 grid-area: i2;
             }
         }
@@ -61,6 +68,7 @@
 
             @include md{
                 background-position: center;
+                background-size: cover;
                 grid-area: i3;
             }
         }

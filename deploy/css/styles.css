@@ -526,6 +526,12 @@ header div #logo {
 ============= */
 #History {
   grid-area: History;
+  margin: 16px;
+}
+@media (min-width: 1024px) {
+  #History {
+    margin: 24px;
+  }
 }
 #History h1 {
   font-weight: 500;
@@ -553,26 +559,30 @@ header div #logo {
 }
 @media (min-width: 768px) {
   #History ul {
-    grid-template-rows: 50vh 50vh;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "i1 i1 i2 i2" "i1 i1 i2 i2" "i1 i1 i2 i2";
+    grid-template-rows: 40vh 40vh;
+    grid-template-columns: 2;
+    grid-template-areas: "i1 i1 i2 i2" "i3 i3 i3 i3" "i3 i3 i3 i3";
   }
 }
 #History ul #i1 {
   background-image: url("../img/History/nike-sb-shoe-boxes-explained-08 (1).png");
+  margin: 16px;
 }
 @media (min-width: 768px) {
   #History ul #i1 {
     background-position: center;
+    background-size: cover;
     grid-area: i1;
   }
 }
 #History ul #i2 {
   background-image: url("../img/History/nike-sb-shoe-boxes-explained-01 (1).png");
+  margin: 16px;
 }
 @media (min-width: 768px) {
   #History ul #i2 {
     background-position: center;
+    background-size: cover;
     grid-area: i2;
   }
 }
@@ -582,6 +592,7 @@ header div #logo {
 @media (min-width: 768px) {
   #History ul #i3 {
     background-position: center;
+    background-size: cover;
     grid-area: i3;
   }
 }
