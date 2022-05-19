@@ -229,6 +229,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/sblogo.png" : {
+      "ft" : 32768,
+      "iS" : 10292,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/sblogo.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/img\/Screen Shot 2021-03-09 at 5.30.17 PM.png" : {
       "ft" : 32768,
       "iS" : 221694,
@@ -287,12 +300,52 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/dev\/content\/Facts.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dev\/content\/Facts.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/Hero-1" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dev\/content\/Hero-1",
+      "oF" : 0
+    },
+    "\/dev\/content\/Our-History.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dev\/content\/Our-History.html",
+      "oF" : 0
+    },
     "\/dev\/content\/search.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/content\/search.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/Slider-1.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dev\/content\/Slider-1.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/Slider-2.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dev\/content\/Slider-2.html",
       "oF" : 0
     },
     "\/dev\/global\/footer.kit" : {
@@ -333,6 +386,14 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/global\/scripts.html",
+      "oF" : 0
+    },
+    "\/dev\/index.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dev\/index.html",
       "oF" : 0
     },
     "\/dev\/index.kit" : {
