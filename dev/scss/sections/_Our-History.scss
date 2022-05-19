@@ -1,0 +1,70 @@
+/* =============
+    Our History
+============= */
+#History{
+    grid-area: History;
+
+    h1 {
+        font-weight: 500;
+        font-size: rem-calc(28);
+        text-align: left;
+        margin-left: 12px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    
+    p {
+        font-weight: 300;
+        font-size: rem-calc(26);
+        text-align: left;
+        margin-left: 12px;
+    
+        @include md {
+            margin-top: 24px;
+        }
+    }
+
+    ul{
+        padding-top: 24px;
+        display: grid;
+        grid-template-rows: 50vh 75vh;
+
+        @include md {
+            grid-template-rows: 50vh 50vh;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas:
+                    "i1 i1 i2 i2"
+                    "i1 i1 i2 i2"
+                    "i1 i1 i2 i2"
+        }
+
+        #i1{
+            background-image: url("../img/History/nike-sb-shoe-boxes-explained-08 (1).png");
+
+            @include md{
+                background-position: center;
+                grid-area: i1;
+            }
+        }
+
+        #i2{
+            background-image: url("../img/History/nike-sb-shoe-boxes-explained-01 (1).png");
+
+            @include md{
+                background-position: center;
+                grid-area: i2;
+            }
+        }
+
+        #i3{
+            background-image: url("../img/History/nike-dunk-low-sb-elite-pink-box-release-date (1).png");
+
+            @include md{
+                background-position: center;
+                grid-area: i3;
+            }
+        }
+
+        
+}
+}
