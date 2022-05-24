@@ -1,3 +1,87 @@
 /* =============
     Navigation
 ============= */
+nav {
+    display: none;
+	height: 100vh;
+	padding: 16px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 50vw;  
+
+    @include lg {
+		display: block;
+		height: 100%;
+		padding: 0;
+		position: relative;
+		width: 100%;
+	}
+
+    aside {
+		display: flex;
+		justify-content: flex-end;
+
+		@include lg{
+            display: none;
+        }
+
+		button {
+			background-color: transparent;
+			border: none;
+			color: #889BAC;;
+		}
+    }
+        ul {
+            height: 100%;
+            padding-top: 20%;
+
+            @include lg {
+                align-items: center;
+                display: flex;
+                justify-content: flex-end;
+                padding-top: 0px;
+                margin-right: 100px;
+            }
+	}
+
+    li {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 24px;
+        text-align: center;
+
+        @include lg {
+            margin-bottom: 0;
+            margin-left: 16px;
+            padding-left: 24px;
+        }
+}
+
+a:link,a:visited {
+				color: green;
+				font-size: rem-calc(20);
+				font-weight: 300;
+				text-decoration: none;
+				transition: 0.25s;
+                font-weight: 700;
+                font-size: rem-calc(24);
+				padding-left: 24px;
+
+				@include lg {
+					color: #36B0A1;
+				}
+
+                @include xl {
+					color: #5E5BB9;
+				}
+
+&:hover,&:active {
+					color: black;
+				}
+			}
+			&:first-child {
+				border: none;
+			}
+			
+    }

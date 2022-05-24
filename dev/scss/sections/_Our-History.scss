@@ -1,8 +1,25 @@
 /* =============
     Our History
 ============= */
+#beyond{
+    img{
+        display: flex;
+        margin-top: 24px;
+        background-size: cover;
+        width: 100%;
+
+        @include lg{
+            display: flex;
+            margin-top: 40px;
+            background-size: cover;
+            width: 100%;
+        }
+    } 
+    
+}
 #History{
     grid-area: History;
+    
     margin: 16px;
 
     @include lg{
@@ -20,7 +37,7 @@
     
     p {
         font-weight: 300;
-        font-size: rem-calc(26);
+        font-size: rem-calc(16);
         text-align: left;
         margin-left: 12px;
     
@@ -28,11 +45,13 @@
             margin-top: 24px;
         }
     }
+aside{
+    display: flex;
 
     ul{
         padding-top: 24px;
         display: grid;
-        grid-template-rows: 50vh 75vh;
+        grid-template-rows: 50vh;
         
         @include md {
             grid-template-rows: 40vh 40vh;
@@ -44,7 +63,7 @@
         }
 
         #i1{
-            background-image: url("../img/History/nike-sb-shoe-boxes-explained-08 (1).png");
+            background-image: url("../img/History/nike-sb-shoe-boxes-explained-08.png");
             margin: 16px;
             @include md{
                 background-position: center;
@@ -54,7 +73,7 @@
         }
 
         #i2{
-            background-image: url("../img/History/nike-sb-shoe-boxes-explained-01 (1).png");
+            background-image: url("../img/History/nike-sb-shoe-boxes-explained-01.png");
             margin: 16px;
             @include md{
                 background-position: center;
@@ -64,7 +83,7 @@
         }
 
         #i3{
-            background-image: url("../img/History/nike-dunk-low-sb-elite-pink-box-release-date (1).png");
+            background-image: url("../img/History/nike-dunk-low-sb-elite-pink-box-release-date.png");
 
             @include md{
                 background-position: center;
@@ -72,7 +91,8 @@
                 grid-area: i3;
             }
         }
-
-        
+}
+    
+    
 }
 }

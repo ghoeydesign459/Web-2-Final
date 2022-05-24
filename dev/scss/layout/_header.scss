@@ -7,9 +7,53 @@ header{
     grid-template-areas: ". header .";
     padding: 24px 16px;
 
+    @include xl{
+        grid-template-columns: auto 1440px auto;
+    }
+
     div{
+
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "logo burger";
+
+        @include lg{
+            grid-template-areas: "logo nav";
+        }
+
+        #burger{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+            @include lg{
+                display: none;
+            }
+
+            button{
+                border: none;
+                background-color: transparent;
+                font-size: rem-calc(30);
+
+                @include md{
+                    font-size: rem-calc(45);
+                }
+            }
+    }
+
         #logo{
             display: flex;
-        }
+            img{
+                width: 100px;
+                @include lg{
+                    width: 150px;
+                    
+                }
+            }
+
+            
+  
     }
+}
 }

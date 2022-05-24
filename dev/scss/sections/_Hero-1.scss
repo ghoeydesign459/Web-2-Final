@@ -1,0 +1,38 @@
+/* =============
+    hero
+============= */
+
+#Hero-1{
+
+    div{
+  
+        #hero-image{
+            width: 100vw;
+            height: 100vh;
+            background-image: url("../img/sbboxblue.png");
+            background-size: cover;
+        
+            @include md{
+            //     width: 100vw;
+            // height: 100vh;
+            background-image: url("../img/sbboxpink.png");
+            // background-size: cover;
+            }
+        
+            @include lg{
+            //     width: 100vw;
+            // height: 100vh;
+            background-image: url("../img/sbboxteal.png");
+            // background-size: cover;
+            }
+        
+            @include xl{
+            //     width: 100vw;
+            // height: 100vh;
+            background-image: url("../img/sbboxpurple.png");
+            // background-size: cover;
+            }
+        }
+    }
+
+}

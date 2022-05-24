@@ -450,6 +450,91 @@ textarea {
 /* =============
     Navigation
 ============= */
+nav {
+  display: none;
+  height: 100vh;
+  padding: 16px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50vw;
+}
+@media (min-width: 1024px) {
+  nav {
+    display: block;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+}
+nav aside {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (min-width: 1024px) {
+  nav aside {
+    display: none;
+  }
+}
+nav aside button {
+  background-color: transparent;
+  border: none;
+  color: #889BAC;
+}
+nav ul {
+  height: 100%;
+  padding-top: 20%;
+}
+@media (min-width: 1024px) {
+  nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0px;
+    margin-right: 100px;
+  }
+}
+nav li {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  nav li {
+    margin-bottom: 0;
+    margin-left: 16px;
+    padding-left: 24px;
+  }
+}
+nav a:link, nav a:visited {
+  color: green;
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-decoration: none;
+  transition: 0.25s;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-left: 24px;
+}
+@media (min-width: 1024px) {
+  nav a:link, nav a:visited {
+    color: #36B0A1;
+  }
+}
+@media (min-width: 1200px) {
+  nav a:link, nav a:visited {
+    color: #5E5BB9;
+  }
+}
+nav a:link:hover, nav a:link:active, nav a:visited:hover, nav a:visited:active {
+  color: black;
+}
+nav:first-child {
+  border: none;
+}
+
 /* =============
     Header
 ============= */
@@ -459,13 +544,132 @@ header {
   grid-template-areas: ". header .";
   padding: 24px 16px;
 }
+@media (min-width: 1200px) {
+  header {
+    grid-template-columns: auto 1440px auto;
+  }
+}
+header div {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-areas: "logo burger";
+}
+@media (min-width: 1024px) {
+  header div {
+    grid-template-areas: "logo nav";
+  }
+}
+header div #burger {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  header div #burger {
+    display: none;
+  }
+}
+header div #burger button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.875rem;
+}
+@media (min-width: 768px) {
+  header div #burger button {
+    font-size: 2.8125rem;
+  }
+}
 header div #logo {
   display: flex;
+}
+header div #logo img {
+  width: 100px;
+}
+@media (min-width: 1024px) {
+  header div #logo img {
+    width: 150px;
+  }
 }
 
 /* =============
     Footer
 ============= */
+footer {
+  display: flex;
+  padding-top: 16px;
+  grid-area: footer;
+  background-color: #4262DA;
+}
+@media (min-width: 768px) {
+  footer {
+    background-color: #F598AF;
+  }
+}
+@media (min-width: 1024px) {
+  footer {
+    background-color: #36B0A1;
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    background-color: #5E5BB9;
+  }
+}
+footer button {
+  background-color: transparent;
+  border: none;
+  padding-left: 16px;
+}
+footer h1 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  text-align: left;
+  padding-top: 36px;
+  margin-left: 24px;
+}
+footer h2 {
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: left;
+  margin-left: 24px;
+}
+footer p {
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: left;
+  margin-left: 24px;
+}
+footer #footer-text {
+  display: flex;
+  margin-left: 16px auto;
+}
+footer #footer-text h1 {
+  color: white;
+}
+footer #footer-text aside p {
+  color: white;
+}
+footer #footer-text h2 {
+  color: white;
+}
+footer #footer-text img {
+  display: flex;
+  grid-area: footer;
+  width: 36px;
+  margin-left: 24px;
+}
+@media (min-width: 768px) {
+  footer #footer-text {
+    display: grid;
+    grid-template-areas: ". global-content .";
+    grid-template-columns: 50% auto;
+    grid-template-rows: repeat(2);
+    padding-bottom: 20px;
+  }
+}
+
 /* =============
     Search
 ============= */
@@ -502,6 +706,25 @@ header div #logo {
   border: 5px;
   background-color: transparent;
   width: 100%;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: left;
+  color: white;
+  padding-left: 16px;
+}
+#search div form ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+#search div form :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+#search div form ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
 }
 #search div form button {
   border: none;
@@ -522,8 +745,104 @@ header div #logo {
 }
 
 /* =============
+    Facts
+============= */
+#facts h1 {
+  font-weight: 500;
+  font-size: 1.75rem;
+  text-align: left;
+  margin-left: 12px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+#facts p {
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: left;
+  margin-left: 12px;
+}
+@media (min-width: 768px) {
+  #facts p {
+    margin-top: 24px;
+  }
+}
+#facts #images-1 {
+  display: flex;
+}
+#facts #images-1 article ul {
+  display: flex;
+}
+@media (min-width: 768px) {
+  #facts #images-1 article ul {
+    grid-template-rows: 70vh 40vh;
+    grid-template-columns: 2;
+    grid-template-areas: "g2 g2 0 0" "g2 g2 0 0" "g2 g2 0 0";
+  }
+}
+#facts #images-1 article ul #g2 {
+  background-image: url("../img/skater1.png");
+  margin: 16px;
+}
+@media (min-width: 768px) {
+  #facts #images-1 article ul #g2 {
+    background-position: center;
+    grid-area: g2;
+  }
+}
+#facts #images-1 article ul #g3 {
+  background-image: url("../img/skater2.png");
+  margin: 16px;
+}
+@media (min-width: 768px) {
+  #facts #images-1 article ul #g3 {
+    background-position: center;
+    grid-area: g3;
+  }
+}
+
+/* =============
+    hero
+============= */
+#Hero-1 div #hero-image {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/sbboxblue.png");
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  #Hero-1 div #hero-image {
+    background-image: url("../img/sbboxpink.png");
+  }
+}
+@media (min-width: 1024px) {
+  #Hero-1 div #hero-image {
+    background-image: url("../img/sbboxteal.png");
+  }
+}
+@media (min-width: 1200px) {
+  #Hero-1 div #hero-image {
+    background-image: url("../img/sbboxpurple.png");
+  }
+}
+
+/* =============
     Our History
 ============= */
+#beyond img {
+  display: flex;
+  margin-top: 24px;
+  background-size: cover;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  #beyond img {
+    display: flex;
+    margin-top: 40px;
+    background-size: cover;
+    width: 100%;
+  }
+}
+
 #History {
   grid-area: History;
   margin: 16px;
@@ -543,7 +862,7 @@ header div #logo {
 }
 #History p {
   font-weight: 300;
-  font-size: 1.625rem;
+  font-size: 1rem;
   text-align: left;
   margin-left: 12px;
 }
@@ -552,47 +871,57 @@ header div #logo {
     margin-top: 24px;
   }
 }
-#History ul {
+#History aside {
+  display: flex;
+}
+#History aside ul {
   padding-top: 24px;
   display: grid;
-  grid-template-rows: 50vh 75vh;
+  grid-template-rows: 50vh;
 }
 @media (min-width: 768px) {
-  #History ul {
+  #History aside ul {
     grid-template-rows: 40vh 40vh;
     grid-template-columns: 2;
     grid-template-areas: "i1 i1 i2 i2" "i3 i3 i3 i3" "i3 i3 i3 i3";
   }
 }
-#History ul #i1 {
-  background-image: url("../img/History/nike-sb-shoe-boxes-explained-08 (1).png");
+#History aside ul #i1 {
+  background-image: url("../img/History/nike-sb-shoe-boxes-explained-08.png");
   margin: 16px;
 }
 @media (min-width: 768px) {
-  #History ul #i1 {
+  #History aside ul #i1 {
     background-position: center;
     background-size: cover;
     grid-area: i1;
   }
 }
-#History ul #i2 {
-  background-image: url("../img/History/nike-sb-shoe-boxes-explained-01 (1).png");
+#History aside ul #i2 {
+  background-image: url("../img/History/nike-sb-shoe-boxes-explained-01.png");
   margin: 16px;
 }
 @media (min-width: 768px) {
-  #History ul #i2 {
+  #History aside ul #i2 {
     background-position: center;
     background-size: cover;
     grid-area: i2;
   }
 }
-#History ul #i3 {
-  background-image: url("../img/History/nike-dunk-low-sb-elite-pink-box-release-date (1).png");
+#History aside ul #i3 {
+  background-image: url("../img/History/nike-dunk-low-sb-elite-pink-box-release-date.png");
 }
 @media (min-width: 768px) {
-  #History ul #i3 {
+  #History aside ul #i3 {
     background-position: center;
     background-size: cover;
     grid-area: i3;
   }
 }
+
+/* =============
+    Slider-1
+============= */
+/* =============
+    Slider-2
+============= */

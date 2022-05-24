@@ -1,0 +1,61 @@
+/* =============
+    Facts
+============= */
+#facts{
+    h1 {
+        font-weight: 500;
+        font-size: rem-calc(28);
+        text-align: left;
+        margin-left: 12px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    
+    p {
+        font-weight: 300;
+        font-size: rem-calc(16);
+        text-align: left;
+        margin-left: 12px;
+    
+        @include md {
+            margin-top: 24px;
+        }
+    }
+
+    #images-1{
+        display: flex;
+    article{
+            ul{
+                display: flex;
+            
+            @include md {
+                grid-template-rows: 70vh 40vh;
+                    grid-template-columns: 2;
+                    grid-template-areas:
+                        "g2 g2 0 0"
+                        "g2 g2 0 0"
+                        "g2 g2 0 0";
+            }
+    
+            #g2{
+                background-image: url("../img/skater1.png");
+                margin: 16px;
+                @include md{
+                    background-position: center;
+                    grid-area: g2;
+                }
+            }
+    
+            #g3{
+                background-image: url("../img/skater2.png");
+                margin: 16px;
+                @include md{
+                    background-position: center;
+                    grid-area: g3;
+                }
+            }
+        }
+    }
+        
+    }
+}
