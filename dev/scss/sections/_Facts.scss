@@ -2,7 +2,9 @@
     Facts
 ============= */
 #Facts{
+    display: grid;
     
+
     h1 {
         font-weight: 500;
         font-size: rem-calc(28);
@@ -17,35 +19,43 @@
         font-size: rem-calc(16);
         text-align: left;
         margin-left: 12px;
+        padding-bottom: 16px;
     
         @include md {
             margin-top: 24px;
+            padding-bottom: 36px;
         }
     }
+
     #images-1{
+        display: grid;
+        grid-template-columns: 50% auto;
+        
         #card-1{
-  
-            aside{
+           
                 img{
-                    display: flex;
+                    height: 50vh;
+                width: 50vh;
+                align-items: center;
                     padding-left: 16px;
-                    border: 3px solid red;
                 }
             }
     }
     }
 
+#images-2{
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "card-2 . .";
 
-#card-2{
-  
-    aside{
-        img{
-            display: flex;
-            padding-left: 16px;
-            border: 3px solid red;
+    #card-2{
+            img{
+                height: 50vh;
+                width: 50vh;
+                align-items: center;
+                padding-left: 16px;
+            }
         }
     }
-}
 
-    }
 

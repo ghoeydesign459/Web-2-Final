@@ -747,6 +747,9 @@ footer #footer-text img {
 /* =============
     Facts
 ============= */
+#Facts {
+  display: grid;
+}
 #Facts h1 {
   font-weight: 500;
   font-size: 1.75rem;
@@ -760,21 +763,35 @@ footer #footer-text img {
   font-size: 1rem;
   text-align: left;
   margin-left: 12px;
+  padding-bottom: 16px;
 }
 @media (min-width: 768px) {
   #Facts p {
     margin-top: 24px;
+    padding-bottom: 36px;
   }
 }
-#Facts #images-1 #card-1 aside img {
-  display: flex;
-  padding-left: 16px;
-  border: 3px solid red;
+#Facts #images-1 {
+  display: grid;
+  grid-template-columns: 50% auto;
 }
-#Facts #card-2 aside img {
-  display: flex;
+#Facts #images-1 #card-1 img {
+  height: 50vh;
+  width: 50vh;
+  align-items: center;
   padding-left: 16px;
-  border: 3px solid red;
+}
+
+#images-2 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-areas: "card-2 . .";
+}
+#images-2 #card-2 img {
+  height: 50vh;
+  width: 50vh;
+  align-items: center;
+  padding-left: 16px;
 }
 
 /* =============
@@ -806,6 +823,7 @@ footer #footer-text img {
     Our History
 ============= */
 #History {
+  display: grid;
   grid-area: History;
   margin: 16px;
 }
@@ -820,25 +838,18 @@ footer #footer-text img {
   text-align: left;
   margin-left: 12px;
   padding-top: 16px;
-  padding-bottom: 16px;
 }
 #History p {
   font-weight: 300;
   font-size: 1rem;
   text-align: left;
   margin-left: 12px;
+  padding-bottom: 24px;
 }
 @media (min-width: 768px) {
   #History p {
     margin-top: 24px;
   }
-}
-#History #pink-hero #pinkbox {
-  background-image: url("../img/History/pinkbox.png");
-  margin: 16px;
-  background-position: center;
-  background-size: cover;
-  grid-area: pink-hero;
 }
 #History #gallery-1 ul {
   padding-top: 24px;
@@ -877,6 +888,16 @@ footer #footer-text img {
     background-size: cover;
     grid-area: i2;
   }
+}
+#History #gallery-1 #pink-hero #pinkbox {
+  background-image: url("../img/History/pinkbox.png");
+  margin: 16px;
+  background-position: center;
+  background-size: cover;
+  grid-area: pink-hero;
+}
+#History #gallery-1 #beyond {
+  display: grid;
 }
 #History #gallery-1 #beyond img {
   display: flex;
