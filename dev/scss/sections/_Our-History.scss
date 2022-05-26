@@ -1,22 +1,6 @@
 /* =============
     Our History
 ============= */
-#beyond{
-    img{
-        display: flex;
-        margin-top: 24px;
-        background-size: cover;
-        width: 100%;
-
-        @include lg{
-            display: flex;
-            margin-top: 40px;
-            background-size: cover;
-            width: 100%;
-        }
-    } 
-    
-}
 #History{
     grid-area: History;
     
@@ -34,7 +18,7 @@
         padding-top: 16px;
         padding-bottom: 16px;
     }
-    
+
     p {
         font-weight: 300;
         font-size: rem-calc(16);
@@ -45,54 +29,79 @@
             margin-top: 24px;
         }
     }
-aside{
-    display: flex;
 
-    ul{
-        padding-top: 24px;
-        display: grid;
-        grid-template-rows: 50vh;
+    #pink-hero{
+            #pinkbox{
+                background-image: url("../img/History/pinkbox.png");
+                margin: 16px;
+                background-position: center;
+                        background-size: cover;
+                        grid-area:pink-hero;
+            }
+    }
+    
+    
+    #gallery-1{
+    
+        ul{
+            padding-top: 24px;
+            display: grid;
+            grid-template-rows: 50vh;
+            
+            @include md {
+                grid-template-rows: 40vh 40vh;
+                    grid-template-columns: 50% 50%;
+                    grid-template-areas:
+                        "i1 i1 i2 i2"
+                        "i1 i1 i2 i2"
+                        "i1 i1 i2 i2"
+                        
+            }
+    
+            li{
+                height: 50%;
+                width: 50%;
+            }
+    
+            #i1{
+                background-image: url("../img/History/bluebox.png");
+                margin: 16px;
+                @include md{
+                    background-position: center;
+                    background-size: cover;
+                    grid-area: i1;
+                }
+            }
+    
+            #i2{
+                background-image: url("../img/History/purplebox.png");
+                margin: 16px;
+                @include md{
+                    background-position: center;
+                    background-size: cover;
+                    grid-area: i2;
+                }
+            }
+    }
+    
+    #beyond{
+        img{
+            display: flex;
+            margin-top: 24px;
+            background-size: cover;
+            width: 100%;
+    
+            @include lg{
+                display: flex;
+                margin-top: 40px;
+                background-size: cover;
+                width: 100%;
+            }
+        } 
         
-        @include md {
-            grid-template-rows: 40vh 40vh;
-                grid-template-columns: 2;
-                grid-template-areas:
-                    "i1 i1 i2 i2"
-                    "i3 i3 i3 i3"
-                    "i3 i3 i3 i3";
-        }
-
-        #i1{
-            background-image: url("../img/History/nike-sb-shoe-boxes-explained-08.png");
-            margin: 16px;
-            @include md{
-                background-position: center;
-                background-size: cover;
-                grid-area: i1;
-            }
-        }
-
-        #i2{
-            background-image: url("../img/History/nike-sb-shoe-boxes-explained-01.png");
-            margin: 16px;
-            @include md{
-                background-position: center;
-                background-size: cover;
-                grid-area: i2;
-            }
-        }
-
-        #i3{
-            background-image: url("../img/History/nike-dunk-low-sb-elite-pink-box-release-date.png");
-
-            @include md{
-                background-position: center;
-                background-size: cover;
-                grid-area: i3;
-            }
-        }
+        
+    }
+    }    
 }
     
     
-}
-}

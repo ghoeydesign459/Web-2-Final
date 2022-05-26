@@ -658,7 +658,7 @@ footer #footer-text img {
   display: flex;
   grid-area: footer;
   width: 36px;
-  margin-left: 24px;
+  margin-left: 48px;
 }
 @media (min-width: 768px) {
   footer #footer-text {
@@ -747,7 +747,7 @@ footer #footer-text img {
 /* =============
     Facts
 ============= */
-#facts h1 {
+#Facts h1 {
   font-weight: 500;
   font-size: 1.75rem;
   text-align: left;
@@ -755,49 +755,26 @@ footer #footer-text img {
   padding-top: 16px;
   padding-bottom: 16px;
 }
-#facts p {
+#Facts p {
   font-weight: 300;
   font-size: 1rem;
   text-align: left;
   margin-left: 12px;
 }
 @media (min-width: 768px) {
-  #facts p {
+  #Facts p {
     margin-top: 24px;
   }
 }
-#facts #images-1 {
+#Facts #images-1 #card-1 aside img {
   display: flex;
+  padding-left: 16px;
+  border: 3px solid red;
 }
-#facts #images-1 article ul {
+#Facts #card-2 aside img {
   display: flex;
-}
-@media (min-width: 768px) {
-  #facts #images-1 article ul {
-    grid-template-rows: 70vh 40vh;
-    grid-template-columns: 2;
-    grid-template-areas: "g2 g2 0 0" "g2 g2 0 0" "g2 g2 0 0";
-  }
-}
-#facts #images-1 article ul #g2 {
-  background-image: url("../img/skater1.png");
-  margin: 16px;
-}
-@media (min-width: 768px) {
-  #facts #images-1 article ul #g2 {
-    background-position: center;
-    grid-area: g2;
-  }
-}
-#facts #images-1 article ul #g3 {
-  background-image: url("../img/skater2.png");
-  margin: 16px;
-}
-@media (min-width: 768px) {
-  #facts #images-1 article ul #g3 {
-    background-position: center;
-    grid-area: g3;
-  }
+  padding-left: 16px;
+  border: 3px solid red;
 }
 
 /* =============
@@ -805,7 +782,7 @@ footer #footer-text img {
 ============= */
 #Hero-1 div #hero-image {
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   background-image: url("../img/sbboxblue.png");
   background-size: cover;
 }
@@ -828,21 +805,6 @@ footer #footer-text img {
 /* =============
     Our History
 ============= */
-#beyond img {
-  display: flex;
-  margin-top: 24px;
-  background-size: cover;
-  width: 100%;
-}
-@media (min-width: 1024px) {
-  #beyond img {
-    display: flex;
-    margin-top: 40px;
-    background-size: cover;
-    width: 100%;
-  }
-}
-
 #History {
   grid-area: History;
   margin: 16px;
@@ -871,51 +833,63 @@ footer #footer-text img {
     margin-top: 24px;
   }
 }
-#History aside {
-  display: flex;
+#History #pink-hero #pinkbox {
+  background-image: url("../img/History/pinkbox.png");
+  margin: 16px;
+  background-position: center;
+  background-size: cover;
+  grid-area: pink-hero;
 }
-#History aside ul {
+#History #gallery-1 ul {
   padding-top: 24px;
   display: grid;
   grid-template-rows: 50vh;
 }
 @media (min-width: 768px) {
-  #History aside ul {
+  #History #gallery-1 ul {
     grid-template-rows: 40vh 40vh;
-    grid-template-columns: 2;
-    grid-template-areas: "i1 i1 i2 i2" "i3 i3 i3 i3" "i3 i3 i3 i3";
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "i1 i1 i2 i2" "i1 i1 i2 i2" "i1 i1 i2 i2";
   }
 }
-#History aside ul #i1 {
-  background-image: url("../img/History/nike-sb-shoe-boxes-explained-08.png");
+#History #gallery-1 ul li {
+  height: 50%;
+  width: 50%;
+}
+#History #gallery-1 ul #i1 {
+  background-image: url("../img/History/bluebox.png");
   margin: 16px;
 }
 @media (min-width: 768px) {
-  #History aside ul #i1 {
+  #History #gallery-1 ul #i1 {
     background-position: center;
     background-size: cover;
     grid-area: i1;
   }
 }
-#History aside ul #i2 {
-  background-image: url("../img/History/nike-sb-shoe-boxes-explained-01.png");
+#History #gallery-1 ul #i2 {
+  background-image: url("../img/History/purplebox.png");
   margin: 16px;
 }
 @media (min-width: 768px) {
-  #History aside ul #i2 {
+  #History #gallery-1 ul #i2 {
     background-position: center;
     background-size: cover;
     grid-area: i2;
   }
 }
-#History aside ul #i3 {
-  background-image: url("../img/History/nike-dunk-low-sb-elite-pink-box-release-date.png");
+#History #gallery-1 #beyond img {
+  display: flex;
+  margin-top: 24px;
+  background-size: cover;
+  width: 100%;
 }
-@media (min-width: 768px) {
-  #History aside ul #i3 {
-    background-position: center;
+@media (min-width: 1024px) {
+  #History #gallery-1 #beyond img {
+    display: flex;
+    margin-top: 40px;
     background-size: cover;
-    grid-area: i3;
+    width: 100%;
   }
 }
 

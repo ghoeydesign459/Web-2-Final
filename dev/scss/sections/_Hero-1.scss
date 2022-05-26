@@ -8,9 +8,10 @@
   
         #hero-image{
             width: 100vw;
-            height: 100vh;
+            height: 50vh;
             background-image: url("../img/sbboxblue.png");
             background-size: cover;
+            
         
             @include md{
             //     width: 100vw;

@@ -1,7 +1,8 @@
 /* =============
     Facts
 ============= */
-#facts{
+#Facts{
+    
     h1 {
         font-weight: 500;
         font-size: rem-calc(28);
@@ -21,41 +22,30 @@
             margin-top: 24px;
         }
     }
-
     #images-1{
-        display: flex;
-    article{
-            ul{
-                display: flex;
-            
-            @include md {
-                grid-template-rows: 70vh 40vh;
-                    grid-template-columns: 2;
-                    grid-template-areas:
-                        "g2 g2 0 0"
-                        "g2 g2 0 0"
-                        "g2 g2 0 0";
-            }
-    
-            #g2{
-                background-image: url("../img/skater1.png");
-                margin: 16px;
-                @include md{
-                    background-position: center;
-                    grid-area: g2;
+        #card-1{
+  
+            aside{
+                img{
+                    display: flex;
+                    padding-left: 16px;
+                    border: 3px solid red;
                 }
             }
-    
-            #g3{
-                background-image: url("../img/skater2.png");
-                margin: 16px;
-                @include md{
-                    background-position: center;
-                    grid-area: g3;
-                }
-            }
+    }
+    }
+
+
+#card-2{
+  
+    aside{
+        img{
+            display: flex;
+            padding-left: 16px;
+            border: 3px solid red;
         }
     }
-        
-    }
 }
+
+    }
+
