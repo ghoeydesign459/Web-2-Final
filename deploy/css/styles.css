@@ -820,6 +820,49 @@ footer #footer-text img {
 }
 
 /* =============
+    News
+============= */
+#news {
+  display: grid;
+  grid-area: news;
+  background-color: #4262DA;
+}
+@media (min-width: 768px) {
+  #news {
+    background-color: #F598AF;
+  }
+}
+@media (min-width: 1024px) {
+  #news {
+    background-color: #36B0A1;
+  }
+}
+@media (min-width: 1200px) {
+  #news {
+    background-color: #5E5BB9;
+  }
+}
+#news h1 {
+  font-weight: 500;
+  font-size: 1.75rem;
+  text-align: left;
+  margin-left: 12px;
+  padding-top: 16px;
+}
+#news p {
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: left;
+  margin-left: 12px;
+  padding-bottom: 24px;
+}
+@media (min-width: 768px) {
+  #news p {
+    margin-top: 24px;
+  }
+}
+
+/* =============
     Our History
 ============= */
 #History {
