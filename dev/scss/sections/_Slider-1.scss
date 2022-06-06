@@ -1,3 +1,32 @@
 /* =============
     Slider-1
 ============= */
+#Slider-1{
+    h1{
+        display: grid;
+    margin: 16px;
+
+    @include lg{
+        margin: 24px;
+    }
+    }
+
+    #slide-1{
+        article{
+            ul{
+                padding-top: 24px;
+                display: grid;
+
+                li{
+                    height: 60vh;
+                    background-image: url("../img/skateshoes.jpeg");
+                    background-position: center center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    
+}

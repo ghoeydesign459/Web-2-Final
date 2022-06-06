@@ -51,10 +51,15 @@ nav {
         margin-bottom: 24px;
         text-align: center;
 
-        @include lg {
+		@include lg {
             margin-bottom: 0;
-            margin-left: 16px;
-            padding-left: 24px;
+            padding-left: 16px;
+        }
+
+        @include xl {
+            margin-bottom: 0;
+            
+            padding-left: 72px;
         }
 }
 
@@ -66,7 +71,8 @@ a:link,a:visited {
 				transition: 0.25s;
                 font-weight: 700;
                 font-size: rem-calc(24);
-				padding-left: 24px;
+				margin: 16px;
+				
 
 				@include lg {
 					color: #36B0A1;

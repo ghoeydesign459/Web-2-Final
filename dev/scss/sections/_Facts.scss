@@ -3,6 +3,8 @@
 ============= */
 #Facts{
     display: grid;
+    margin-left: 16px;
+    margin-right: 16px;
     
 
     h1 {
@@ -28,32 +30,51 @@
     }
 
     #images-1{
-        display: grid;
+        
         grid-template-columns: 50% auto;
         
+        @include md{
+            display: grid;
+        }
         #card-1{
-           
+
                 img{
-                    height: 50vh;
-                width: 50vh;
+                    height: 35vh;
+                    width: 55vh;
                 align-items: center;
                     padding-left: 16px;
+
+                    @include xl{
+                        height: 55vh;
+                        width: 80vh;
+                    }
                 }
             }
     }
     }
 
 #images-2{
-    display: grid;
     grid-template-columns: 50% auto;
-    grid-template-areas: "card-2 . .";
+    grid-template-areas: "card-2 .";
+    
+
+    @include md{
+        display: grid;
+    }
 
     #card-2{
+        grid-area: card-2;
+
             img{
-                height: 50vh;
-                width: 50vh;
+                height: 35vh;
+                    width: 55vh;
                 align-items: center;
                 padding-left: 16px;
+
+                @include xl{
+                    height: 55vh;
+                    width: 80vh;
+                }
             }
         }
     }

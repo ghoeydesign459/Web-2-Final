@@ -388,6 +388,15 @@ ul li {
   }
 }
 
+.show-for-md {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .show-for-md {
+    display: block;
+  }
+}
+
 .show-for-lg {
   display: none;
 }
@@ -504,8 +513,13 @@ nav li {
 @media (min-width: 1024px) {
   nav li {
     margin-bottom: 0;
-    margin-left: 16px;
-    padding-left: 24px;
+    padding-left: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  nav li {
+    margin-bottom: 0;
+    padding-left: 72px;
   }
 }
 nav a:link, nav a:visited {
@@ -516,7 +530,7 @@ nav a:link, nav a:visited {
   transition: 0.25s;
   font-weight: 700;
   font-size: 1.5rem;
-  padding-left: 24px;
+  margin: 16px;
 }
 @media (min-width: 1024px) {
   nav a:link, nav a:visited {
@@ -547,6 +561,25 @@ header {
 @media (min-width: 1200px) {
   header {
     grid-template-columns: auto 1440px auto;
+  }
+}
+header h1 {
+  font-weight: 500;
+  font-size: 1.75rem;
+  text-align: left;
+  margin-left: 12px;
+  padding-top: 16px;
+}
+header p {
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: left;
+  margin-left: 12px;
+  padding-bottom: 24px;
+}
+@media (min-width: 768px) {
+  header p {
+    margin-top: 24px;
   }
 }
 header div {
@@ -644,6 +677,7 @@ footer p {
 footer #footer-text {
   display: flex;
   margin-left: 16px auto;
+  margin: 0 auto;
 }
 footer #footer-text h1 {
   color: white;
@@ -655,10 +689,8 @@ footer #footer-text h2 {
   color: white;
 }
 footer #footer-text img {
-  display: flex;
-  grid-area: footer;
   width: 36px;
-  margin-left: 48px;
+  margin-left: 98px;
 }
 @media (min-width: 768px) {
   footer #footer-text {
@@ -749,6 +781,8 @@ footer #footer-text img {
 ============= */
 #Facts {
   display: grid;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 #Facts h1 {
   font-weight: 500;
@@ -772,26 +806,49 @@ footer #footer-text img {
   }
 }
 #Facts #images-1 {
-  display: grid;
   grid-template-columns: 50% auto;
 }
+@media (min-width: 768px) {
+  #Facts #images-1 {
+    display: grid;
+  }
+}
 #Facts #images-1 #card-1 img {
-  height: 50vh;
-  width: 50vh;
+  height: 35vh;
+  width: 55vh;
   align-items: center;
   padding-left: 16px;
+}
+@media (min-width: 1200px) {
+  #Facts #images-1 #card-1 img {
+    height: 55vh;
+    width: 80vh;
+  }
 }
 
 #images-2 {
-  display: grid;
   grid-template-columns: 50% auto;
-  grid-template-areas: "card-2 . .";
+  grid-template-areas: "card-2 .";
+}
+@media (min-width: 768px) {
+  #images-2 {
+    display: grid;
+  }
+}
+#images-2 #card-2 {
+  grid-area: card-2;
 }
 #images-2 #card-2 img {
-  height: 50vh;
-  width: 50vh;
+  height: 35vh;
+  width: 55vh;
   align-items: center;
   padding-left: 16px;
+}
+@media (min-width: 1200px) {
+  #images-2 #card-2 img {
+    height: 55vh;
+    width: 80vh;
+  }
 }
 
 /* =============
@@ -800,56 +857,40 @@ footer #footer-text img {
 #Hero-1 div #hero-image {
   width: 100vw;
   height: 50vh;
-  background-image: url("../img/sbboxblue.png");
+  background-image: url("../img/instantsb.jpeg");
+  background-position: center center;
   background-size: cover;
 }
 @media (min-width: 768px) {
   #Hero-1 div #hero-image {
-    background-image: url("../img/sbboxpink.png");
+    background-image: url("../img/parrasb.jpeg");
+    background-position: center;
   }
 }
 @media (min-width: 1024px) {
   #Hero-1 div #hero-image {
-    background-image: url("../img/sbboxteal.png");
+    background-image: url("../img/passportsb.jpeg");
+    height: 80vh;
   }
 }
 @media (min-width: 1200px) {
   #Hero-1 div #hero-image {
-    background-image: url("../img/sbboxpurple.png");
+    background-image: url("../img/philliesdunk.jpeg");
+    height: 120vh;
   }
 }
 
 /* =============
     News
 ============= */
-#news {
-  display: grid;
-  grid-area: news;
-  background-color: #4262DA;
-}
-@media (min-width: 768px) {
-  #news {
-    background-color: #F598AF;
-  }
-}
-@media (min-width: 1024px) {
-  #news {
-    background-color: #36B0A1;
-  }
-}
-@media (min-width: 1200px) {
-  #news {
-    background-color: #5E5BB9;
-  }
-}
-#news h1 {
+#news-releases h1 {
   font-weight: 500;
   font-size: 1.75rem;
   text-align: left;
   margin-left: 12px;
   padding-top: 16px;
 }
-#news p {
+#news-releases p {
   font-weight: 300;
   font-size: 1rem;
   text-align: left;
@@ -857,9 +898,169 @@ footer #footer-text img {
   padding-bottom: 24px;
 }
 @media (min-width: 768px) {
-  #news p {
+  #news-releases p {
     margin-top: 24px;
   }
+}
+#news-releases #news {
+  display: grid;
+  grid-area: news;
+  background-color: #4262DA;
+  color: white;
+}
+@media (min-width: 768px) {
+  #news-releases #news {
+    background-color: #F598AF;
+  }
+}
+@media (min-width: 1024px) {
+  #news-releases #news {
+    background-color: #36B0A1;
+  }
+}
+@media (min-width: 1200px) {
+  #news-releases #news {
+    background-color: #5E5BB9;
+  }
+}
+#news-releases #news article {
+  border: white;
+  border-width: 5px;
+  margin: 0 auto;
+}
+#news-releases #news article img {
+  height: 30vh;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  #news-releases #news article img {
+    height: 40vh;
+  }
+}
+@media (min-width: 1024px) {
+  #news-releases #news article img {
+    height: 50vh;
+  }
+}
+#news-releases #news button {
+  width: 25vh;
+  height: 7vh;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+  border: none;
+  background-color: white;
+  font-weight: 500;
+  color: #4262DA;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  #news-releases #news button {
+    color: #F598AF;
+  }
+}
+@media (min-width: 1024px) {
+  #news-releases #news button {
+    color: #36B0A1;
+  }
+}
+@media (min-width: 1200px) {
+  #news-releases #news button {
+    color: #5E5BB9;
+  }
+}
+#news-releases #releases {
+  display: grid;
+  grid-area: news;
+  background-color: #4262DA;
+  color: white;
+  height: 70vh;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media (min-width: 768px) {
+  #news-releases #releases {
+    background-color: #F598AF;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+@media (min-width: 1024px) {
+  #news-releases #releases {
+    background-color: #36B0A1;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  #news-releases #releases {
+    background-color: #5E5BB9;
+  }
+}
+#news-releases #releases #release-tags {
+  margin: 16px;
+  padding-left: 24px;
+}
+#news-releases #releases #release-tags #text-grid-1 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  margin-bottom: 24px;
+  align-items: center;
+}
+#news-releases #releases #release-tags #text-grid-1 #release-1 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+#news-releases #releases #release-tags #text-grid-2 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  margin-bottom: 24px;
+  align-items: center;
+}
+#news-releases #releases #release-tags #text-grid-2 #release-2 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+#news-releases #releases #release-tags #text-grid-3 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  margin-bottom: 24px;
+  align-items: center;
+}
+#news-releases #releases #release-tags #text-grid-3 #release-3 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+#news-releases #releases #release-tags #text-grid-4 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  margin-bottom: 24px;
+  align-items: center;
+}
+#news-releases #releases #release-tags #text-grid-4 #release-4 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+#news-releases #releases #release-tags #text-grid-5 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  margin-bottom: 24px;
+  align-items: center;
+}
+#news-releases #releases #release-tags #text-grid-5 #release-5 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+#news-releases #releases #release-tags #text-grid-6 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  margin-bottom: 24px;
+  align-items: center;
+}
+#news-releases #releases #release-tags #text-grid-6 #release-6 {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 /* =============
@@ -868,12 +1069,6 @@ footer #footer-text img {
 #History {
   display: grid;
   grid-area: History;
-  margin: 16px;
-}
-@media (min-width: 1024px) {
-  #History {
-    margin: 24px;
-  }
 }
 #History h1 {
   font-weight: 500;
@@ -896,60 +1091,76 @@ footer #footer-text img {
 }
 #History #gallery-1 ul {
   padding-top: 24px;
+  grid-template-columns: 50% auto;
   display: grid;
-  grid-template-rows: 50vh;
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
 }
-@media (min-width: 768px) {
-  #History #gallery-1 ul {
-    grid-template-rows: 40vh 40vh;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "i1 i1 i2 i2" "i1 i1 i2 i2" "i1 i1 i2 i2";
-  }
-}
-#History #gallery-1 ul li {
-  height: 50%;
-  width: 50%;
+#History #gallery-1 ul aside {
+  display: grid;
+  background-repeat: no-repeat;
 }
 #History #gallery-1 ul #i1 {
   background-image: url("../img/History/bluebox.png");
-  margin: 16px;
+  height: 50vh;
+  width: 45vw;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   #History #gallery-1 ul #i1 {
     background-position: center;
     background-size: cover;
     grid-area: i1;
   }
 }
+@media (min-width: 1200px) {
+  #History #gallery-1 ul #i1 {
+    height: 50vh;
+    width: 48vw;
+  }
+}
 #History #gallery-1 ul #i2 {
   background-image: url("../img/History/purplebox.png");
-  margin: 16px;
+  height: 50vh;
+  width: 45vw;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   #History #gallery-1 ul #i2 {
     background-position: center;
     background-size: cover;
     grid-area: i2;
   }
 }
-#History #gallery-1 #pink-hero #pinkbox {
-  background-image: url("../img/History/pinkbox.png");
-  margin: 16px;
-  background-position: center;
-  background-size: cover;
-  grid-area: pink-hero;
+@media (min-width: 1200px) {
+  #History #gallery-1 ul #i2 {
+    height: 50vh;
+    width: 48vw;
+  }
 }
-#History #gallery-1 #beyond {
+#History #pink-hero #pinkbox {
+  background-image: url("../img/History/pigeonsb.jpg");
+  height: 40vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  #History #pink-hero #pinkbox {
+    height: 90vh;
+    margin-bottom: 36px;
+  }
+}
+#History #beyond {
   display: grid;
 }
-#History #gallery-1 #beyond img {
+#History #beyond img {
   display: flex;
   margin-top: 24px;
   background-size: cover;
   width: 100%;
 }
 @media (min-width: 1024px) {
-  #History #gallery-1 #beyond img {
+  #History #beyond img {
     display: flex;
     margin-top: 40px;
     background-size: cover;
@@ -960,23 +1171,65 @@ footer #footer-text img {
 /* =============
     Slider-1
 ============= */
+#Slider-1 h1 {
+  display: grid;
+  margin: 16px;
+}
+@media (min-width: 1024px) {
+  #Slider-1 h1 {
+    margin: 24px;
+  }
+}
+#Slider-1 #slide-1 article ul {
+  padding-top: 24px;
+  display: grid;
+}
+#Slider-1 #slide-1 article ul li {
+  height: 60vh;
+  background-image: url("../img/skateshoes.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* =============
     Slider-2
 ============= */
 #Slider-2 {
   display: grid;
-  margin: 16px;
 }
-@media (min-width: 1024px) {
-  #Slider-2 {
-    margin: 24px;
+#Slider-2 h1 {
+  font-weight: 500;
+  font-size: 1.75rem;
+  text-align: left;
+  margin-left: 12px;
+  padding-top: 16px;
+}
+#Slider-2 p {
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: left;
+  margin-left: 12px;
+  padding-bottom: 24px;
+}
+@media (min-width: 768px) {
+  #Slider-2 p {
+    margin-top: 24px;
   }
 }
+#Slider-2 #slider-hero {
+  background-image: url("../img/kevin.png");
+  height: 50vh;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 16px;
+}
 #Slider-2 button {
+  margin: 0 auto;
   width: 25vh;
   padding-top: 16px;
   padding-bottom: 16px;
-  align-items: center;
+  text-align: center;
   border: none;
   color: white;
   font-weight: 500;
@@ -985,6 +1238,7 @@ footer #footer-text img {
 @media (min-width: 768px) {
   #Slider-2 button {
     background-color: #F598AF;
+    margin-top: 24px;
   }
 }
 @media (min-width: 1024px) {

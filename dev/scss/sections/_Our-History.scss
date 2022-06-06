@@ -4,12 +4,6 @@
 #History{
     display: grid;
     grid-area: History;
-    
-    margin: 16px;
-
-    @include lg{
-        margin: 24px;
-    }
 
     h1 {
         font-weight: 500;
@@ -34,78 +28,89 @@
     
     
     #gallery-1{
-    
+
         ul{
             padding-top: 24px;
+            grid-template-columns: 50% auto;
             display: grid;
-            grid-template-rows: 50vh;
-            
-            @include md {
-                grid-template-rows: 40vh 40vh;
-                    grid-template-columns: 50% 50%;
-                    grid-template-areas:
-                        "i1 i1 i2 i2"
-                        "i1 i1 i2 i2"
-                        "i1 i1 i2 i2"
-                        
-            }
+            background-repeat: no-repeat;
+            margin-bottom: 16px;
     
-            li{
-                height: 50%;
-                width: 50%;
+            aside{
+                display: grid;
+                background-repeat: no-repeat;
             }
     
             #i1{
                 background-image: url("../img/History/bluebox.png");
-                margin: 16px;
-                @include md{
+                height: 50vh;
+                width: 45vw;
+                @include lg{
                     background-position: center;
                     background-size: cover;
                     grid-area: i1;
+                }
+
+                @include xl{
+                    height: 50vh;
+                width: 48vw;
                 }
             }
     
             #i2{
                 background-image: url("../img/History/purplebox.png");
-                margin: 16px;
-                @include md{
+                height: 50vh;
+                width: 45vw;
+                
+                @include lg{
                     background-position: center;
                     background-size: cover;
                     grid-area: i2;
                 }
+
+                @include xl{
+                    height: 50vh;
+                width: 48vw;
+                }
             }
     }
-
+    }   
+    
     #pink-hero{
         #pinkbox{
-            background-image: url("../img/History/pinkbox.png");
-            margin: 16px;
-            background-position: center;
-                    background-size: cover;
-                    grid-area:pink-hero;
+            background-image: url("../img/History/pigeonsb.jpg");
+            height: 40vh;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 16px;
+
+            @include md{
+                height: 90vh; 
+                margin-bottom: 36px;
+            }
         }
 }
+
+#beyond{
+    display: grid;
     
-    #beyond{
-        display: grid;
-        
-        img{
+    img{
+        display: flex;
+        margin-top: 24px;
+        background-size: cover;
+        width: 100%;
+
+        @include lg{
             display: flex;
-            margin-top: 24px;
+            margin-top: 40px;
             background-size: cover;
             width: 100%;
+        }
+    } 
     
-            @include lg{
-                display: flex;
-                margin-top: 40px;
-                background-size: cover;
-                width: 100%;
-            }
-        } 
-        
-        
-    }
-    }    
+    
+}
 }
     
     

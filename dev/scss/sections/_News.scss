@@ -1,23 +1,7 @@
 /* =============
     News
 ============= */
-#news{
-    display: grid;
-    grid-area: news;
-    background-color: #4262DA;
-
-    @include md{
-        background-color: #F598AF;
-    }
-
-    @include lg{
-        background-color: #36B0A1;
-    }
-
-    @include xl{
-        background-color: #5E5BB9;
-    }
-
+#news-releases {
 
     h1 {
         font-weight: 500;
@@ -37,6 +21,187 @@
     
         @include md {
             margin-top: 24px;
+        }
+    }
+    
+    #news {
+        display: grid;
+        
+        grid-area: news;
+        background-color: #4262DA;
+        color: white;
+        @include md {
+            background-color: #F598AF;
+        }
+
+        @include lg {
+            background-color: #36B0A1;
+        }
+
+        @include xl {
+            background-color: #5E5BB9;
+        }
+
+        article {
+            
+            border: white;
+            border-width: 5px;
+            margin: 0 auto;
+
+            img {
+                height: 30vh;
+                margin-top: 16px;
+                margin-bottom: 16px;
+
+                @include md {
+                    height: 40vh;
+                }
+
+                @include lg {
+                    height: 50vh;
+                }
+            }
+        }
+
+        button {
+            
+            width: 25vh;
+            height: 7vh;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            text-align: center;
+            border: none;
+            background-color: white;
+            font-weight: 500;
+            color: #4262DA;
+            margin: 0 auto;
+            
+
+
+            @include md {
+                color: #F598AF;
+            }
+
+            @include lg {
+                color: #36B0A1;
+            }
+
+            @include xl {
+                color: #5E5BB9;
+            }
+
+            ;
+        }
+    }
+
+    #releases {
+        display: grid;
+        grid-area: news;
+        background-color: #4262DA;
+        color: white;
+        height: 70vh;
+        padding-top: 16px;
+        padding-bottom: 16px;
+            
+
+
+        @include md {
+            background-color: #F598AF;
+            padding-top: 36px;
+        padding-bottom: 36px;
+        }
+
+        @include lg {
+            background-color: #36B0A1;
+            padding-top: 48px;
+        padding-bottom: 48px;
+        }
+
+        @include xl {
+            background-color: #5E5BB9;
+        }
+
+
+        #release-tags {
+
+            margin: 16px;
+            padding-left: 24px;
+
+            #text-grid-1 {
+                display: grid;
+                grid-template-columns: 50% auto;
+                margin-bottom: 24px;
+                align-items: center;
+                
+
+                #release-1 {
+                    margin-left: 16px;
+                    margin-right: 16px;
+                    
+                }
+            }
+
+            #text-grid-2 {
+                display: grid;
+                grid-template-columns: 50% auto;
+                margin-bottom: 24px;
+                align-items: center;
+
+                #release-2 {
+                    margin-left: 16px;
+                    margin-right: 16px;
+
+                }
+            }
+
+            #text-grid-3 {
+                display: grid;
+                grid-template-columns: 50% auto;
+                margin-bottom: 24px;
+                align-items: center;
+
+                #release-3 {
+                    margin-left: 16px;
+                    margin-right: 16px;
+
+                }
+            }
+
+            #text-grid-4 {
+                display: grid;
+                grid-template-columns: 50% auto;
+                margin-bottom: 24px;
+                align-items: center;
+
+                #release-4 {
+                    margin-left: 16px;
+                    margin-right: 16px;
+                }
+            }
+
+            #text-grid-5 {
+                display: grid;
+                grid-template-columns: 50% auto;
+                margin-bottom: 24px;
+                align-items: center;
+
+                #release-5 {
+                    margin-left: 16px;
+                    margin-right: 16px;
+                }
+            }
+
+            #text-grid-6 {
+                display: grid;
+                grid-template-columns: 50% auto;
+                margin-bottom: 24px;
+                align-items: center;
+
+                #release-6 {
+                    margin-left: 16px;
+                    margin-right: 16px;
+                }
+            }
         }
     }
 }

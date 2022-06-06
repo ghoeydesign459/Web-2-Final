@@ -9,28 +9,32 @@
         #hero-image{
             width: 100vw;
             height: 50vh;
-            background-image: url("../img/sbboxblue.png");
-            background-size: cover;
+            background-image: url("../img/instantsb.jpeg");
+            background-position: center center;
+                    background-size: cover;
             
         
             @include md{
             //     width: 100vw;
             // height: 100vh;
-            background-image: url("../img/sbboxpink.png");
+            background-image: url("../img/parrasb.jpeg");
+            background-position: center;
             // background-size: cover;
             }
         
             @include lg{
             //     width: 100vw;
             // height: 100vh;
-            background-image: url("../img/sbboxteal.png");
+            background-image: url("../img/passportsb.jpeg");
+            height:80vh;
             // background-size: cover;
             }
         
             @include xl{
             //     width: 100vw;
             // height: 100vh;
-            background-image: url("../img/sbboxpurple.png");
+            background-image: url("../img/philliesdunk.jpeg");
+            height:120vh;
             // background-size: cover;
             }
         }
